@@ -1,3 +1,25 @@
 <resources>
-    <string name="app_name">Smart tasks</string>
+    <string name="app_name">Smart Tasks</string>
+    <string name="today">Today</string>
+    <string name="yesterday">Yesterday</string>
+    <string name="tomorrow">Tomorrow</string>
+    <string name="due_date">Due date</string>
+    <string name="days_left">Days left</string>
+    <string name="previous_day">Previous Day</string>
+    <string name="next_day">Next Day</string>
+    <string name="no_tasks">No tasks for</string>
+    <string name="resolve">Resolve</string>
+    <string name="resolved">Resolved</string>
+    <string name="unresolved">Unresolved</string>
+    <string name="empty_screen">Empty screen</string>
+    <string name="can_not_resolve">Can\'t resolve</string>
+    <string name="task_detail">Task Detail</string>
+    <string name="back">Back</string>
+    <string name="can_not_update">Error: Could not update the task</string>
+    <string name="question_comment">Do you want to left comment</string>
+    <string name="your_comment">Your comment</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
 </resources>
