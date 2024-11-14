@@ -9,7 +9,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
-//import com.zhbcompany.smarttasks.presentation.task_details.TaskDetailsScreen
+import com.zhbcompany.smarttasks.presentation.task_details.TaskDetailsScreen
 import com.zhbcompany.smarttasks.presentation.task_details.TaskDetailsViewModel
 import com.zhbcompany.smarttasks.presentation.task_list.TaskListScreen
 import com.zhbcompany.smarttasks.presentation.task_list.TaskListViewModel
@@ -50,11 +50,11 @@ class MainActivity : ComponentActivity() {
                             }
                         )
                     ) { backStackEntry ->
-//                        TaskDetailsScreen(
-//                            navController = navController,
-//                            viewModel = taskDetailsViewModel,
-//                            backStackEntry.arguments?.getString("taskId"),
-//                        )
+                        TaskDetailsScreen(
+                            navController = navController,
+                            viewModel = taskDetailsViewModel,
+                            backStackEntry.arguments?.getString("taskId"),
+                        )
                     }
                 }
             }
