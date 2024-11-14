@@ -3,6 +3,7 @@ package com.zhbcompany.smarttasks
 import android.app.Application
 import com.zhbcompany.smarttasks.di.appModule
 import com.zhbcompany.smarttasks.di.dataModule
+import com.zhbcompany.smarttasks.di.domainModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 
@@ -29,6 +30,7 @@ class SmartTasksApp : Application() {
                 listOf(
                     appModule,
                     dataModule,
+                    domainModule
                 )
             )
         }
