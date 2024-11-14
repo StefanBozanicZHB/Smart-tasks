@@ -27,6 +27,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import com.zhbcompany.smarttasks.R
 import com.zhbcompany.smarttasks.domain.model.TaskDomain
 import com.zhbcompany.smarttasks.presentation.components.AppBarIcon
@@ -34,11 +35,13 @@ import com.zhbcompany.smarttasks.presentation.components.AppBarTitle
 import com.zhbcompany.smarttasks.presentation.components.CardTaskItem
 import com.zhbcompany.smarttasks.presentation.components.CenteredErrorMessage
 import com.zhbcompany.smarttasks.presentation.components.LoadingIndicator
+import com.zhbcompany.smarttasks.presentation.util.Screen
 import com.zhbcompany.smarttasks.util.DateUtil
 import java.time.LocalDate
 
 @Composable
 fun TaskListScreen(
+    navController: NavController,
     viewModel: TaskListViewModel,
 ) {
     val state = viewModel.state.collectAsState()
@@ -67,8 +70,8 @@ fun TaskListScreen(
                     is TaskListState.Success -> TaskListContent(
                         tasks = currentState.tasks,
                         targetDate = targetDate.value,
-                        onCardItemClick = {
-                            // todo implement this
+                        onCardItemClick = { taskId ->
+                            navController.navigate(Screen.TaskDetailsScreen.route + "?taskId=$taskId")
                         }
                     )
                     is TaskListState.Error -> CenteredErrorMessage(currentState.message)
