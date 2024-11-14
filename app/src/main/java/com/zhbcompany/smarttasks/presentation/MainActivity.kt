@@ -1,4 +1,4 @@
-package com.zhbcompany.smarttasks
+package com.zhbcompany.smarttasks.presentation
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -11,7 +11,10 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.zhbcompany.smarttasks.presentation.task_list.TaskListScreen
+import com.zhbcompany.smarttasks.presentation.task_list.TaskListViewModel
 import com.zhbcompany.smarttasks.ui.theme.SmartTasksTheme
+import org.koin.androidx.viewmodel.ext.android.getViewModel
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,29 +22,12 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             SmartTasksTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
+                val taskListViewModel : TaskListViewModel = getViewModel()
+
+                TaskListScreen(
+                    viewModel = taskListViewModel
+                )
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    SmartTasksTheme {
-        Greeting("Android")
     }
 }
