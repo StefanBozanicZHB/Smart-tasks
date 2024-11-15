@@ -29,7 +29,7 @@ Follow these steps to set up and run the project on your local machine:
 - **Task Management**: Create, update tasks with ease.
 - **Sorting Options**: Sort tasks by priority or due date to stay organized.
 - **Theme Selection**: Choose between light and dark themes based on your preference. [In progress...]
-- **Date Picker**: Easily select a date to view tasks scheduled for that day. [In progress...]
+- **Date Picker**: Easily select a date to view tasks scheduled for that day.
 - **Responsive UI**: A beautiful and responsive UI built using Jetpack Compose.
 
 ## 📚 Libraries and Tools Used
