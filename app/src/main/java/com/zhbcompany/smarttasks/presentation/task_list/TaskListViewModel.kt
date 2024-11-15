@@ -26,6 +26,9 @@ class TaskListViewModel(
     private val _targetDate = MutableStateFlow(LocalDate.now())
     val targetDate: StateFlow<LocalDate> get() = _targetDate.asStateFlow()
 
+    private val _showCalendar = MutableStateFlow(false)
+    val showCalendar: StateFlow<Boolean> get() = _showCalendar.asStateFlow()
+
     // Job management for fetching tasks
     private var getTasksJob by SetCancelJob()
 
@@ -44,6 +47,10 @@ class TaskListViewModel(
                 fetchTasksForDate(date)
             }
         }
+    }
+
+    fun changeDate(newDate: LocalDate) {
+        _targetDate.value = newDate
     }
 
     /**
@@ -115,5 +122,9 @@ class TaskListViewModel(
                 _state.value = TaskListState.Error(message = result.message)
             }
         }
+    }
+
+    fun showCalendar(show: Boolean) {
+        _showCalendar.value = show
     }
 }

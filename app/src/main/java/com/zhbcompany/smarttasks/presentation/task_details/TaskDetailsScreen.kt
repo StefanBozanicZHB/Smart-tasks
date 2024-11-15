@@ -90,7 +90,12 @@ fun TaskDetailsScreen(
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { AppBarTitle(text = stringResource(R.string.task_detail)) },
+                title = {
+                    AppBarTitle(
+                        modifier = Modifier.fillMaxSize(),
+                        text = stringResource(R.string.task_detail)
+                    )
+                },
                 navigationIcon = {
                     AppBarIcon(
                         onClick = { viewModel.onBack() },

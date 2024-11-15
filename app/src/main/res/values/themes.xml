@@ -2,4 +2,9 @@
 <resources>
 
     <style name="Theme.SmartTasks" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <style name="DatePickerTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:colorAccent">@color/yellow</item>
+        <item name="colorAccent">@color/yellow</item>
+    </style>
 </resources>
